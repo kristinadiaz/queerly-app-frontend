@@ -4,7 +4,6 @@
 
 body {
   background-image: url('/Users/kmonkey84/Development/code/phase5/queerly-app/client/src/images/rainbow.png');
-  background-color: #BDE0FE;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: bottom right;
@@ -14,12 +13,4 @@ body {
   position: absolute;
   margin-top: 15%;
   margin-left: 8%;
-}
-
-.background-white {
-  background-color: white;
-}
-
-.background-blue {
-  background-color: lightblue;
 }

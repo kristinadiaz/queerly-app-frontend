@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
-import { Button, Form, Grid, Header, Image, Segment, Message } from 'semantic-ui-react'
+import { Button, Form, Grid, Header, Segment, Message } from 'semantic-ui-react'
 const API = 'http://localhost:3000'
 
 export default function Login ({ setUser }) {
