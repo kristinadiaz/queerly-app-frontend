@@ -12,5 +12,9 @@ body {
 .logo {
   position: absolute;
   margin-top: 15%;
-  margin-left: 8%;
+  margin-left: 15%;
+}
+
+.background-white {
+  background-color: white;
 }
