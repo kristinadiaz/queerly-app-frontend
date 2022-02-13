@@ -10,6 +10,6 @@ export default function Home({ user }) {
             </div>
         )
     } else {
-        return <Link to='/'></Link>
+        return <Link to='/'>Please Login</Link>
     }
 }
