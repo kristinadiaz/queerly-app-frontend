@@ -27,6 +27,7 @@ export default function Map({ businesses }) {
             lat: business.lat,
             lng: business.lng
         }
+        business.position = position
         return(
             <Marker 
             key={business.id}
@@ -40,9 +41,9 @@ export default function Map({ businesses }) {
         <LoadScript googleMapsApiKey='AIzaSyBgjp2nlPWlQ8aDZwcBF0O9aIvYJkO_6uM'>
             <GoogleMap mapContainerStyle={mapStyles} zoom={12} center={defaultCenter}>
                 {locations}
-                {select.location && (
+                {select.id && (
                     <InfoWindow
-                    position={select.location}
+                    position={select.position}
                     clickable={true}
                     onCloseClick={() => setSelect({})}
                     >

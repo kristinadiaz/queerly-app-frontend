@@ -17,15 +17,6 @@ export default function App() {
     .then(data => setBusinesses(data))
   }, [])
 
-  // useEffect(() => {
-  //   fetch(`${API}/me`)
-  //   .then(res => {
-  //     if(res.ok) {
-  //       res.json().then(user => setUser(user));
-  //     }
-  //   });
-  // }, [])
-
   return(
     <div>
       <Routes>
@@ -37,3 +28,12 @@ export default function App() {
     </div>
   )
 }
+
+// useEffect(() => {
+  //   fetch(`${API}/me`)
+  //   .then(res => {
+  //     if(res.ok) {
+  //       res.json().then(user => setUser(user));
+  //     }
+  //   });
+  // }, [])

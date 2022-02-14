@@ -3,7 +3,7 @@ import { Card, Image } from 'semantic-ui-react';
 
 export default function BusinessCard({ bus, handleClick }) {
     return(
-        <Card key={bus.id} onClick={() => handleClick(bus)}>
+        <Card key={bus.id}>
             <Image src={bus.image} />
             <Card.Content>
                 <Card.Header>{bus.name}</Card.Header>
@@ -23,3 +23,5 @@ export default function BusinessCard({ bus, handleClick }) {
         </Card>
     )
 }
+
+// onClick={() => handleClick(bus)}
