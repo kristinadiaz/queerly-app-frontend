@@ -16,7 +16,7 @@ const defaultCenter = {
 
 export default function Map({ businesses }) {
     const [select, setSelect] = useState({})
-    console.log(select)
+    // console.log(select)
 
     const handleSelect = item => {
         setSelect(item)
