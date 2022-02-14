@@ -9,23 +9,30 @@ const API = 'http://localhost:3000'
 
 export default function App() {
   const [user, setUser] = useState()
+  const [businesses, setBusinesses] = useState([])
 
   useEffect(() => {
-    fetch(`${API}/me`)
-    .then(res => {
-      if(res.ok) {
-        res.json().then(user => setUser(user));
-      }
-    });
+    fetch(`${API}/businesses`)
+    .then(res => res.json())
+    .then(data => setBusinesses(data))
   }, [])
+
+  // useEffect(() => {
+  //   fetch(`${API}/me`)
+  //   .then(res => {
+  //     if(res.ok) {
+  //       res.json().then(user => setUser(user));
+  //     }
+  //   });
+  // }, [])
 
   return(
     <div>
       <Routes>
         <Route path='/' element={<SplashPage />} />
-        <Route path='/home' element={<Home user={user} setUser={setUser}/>} />
-        <Route path='/login' element={<Login user={user} setUser={setUser}/>} />
-        <Route path='/signup' element={<SignUp setUser={setUser}/>} />
+        <Route path='/home' element={<Home user={user} setUser={setUser} businesses={businesses} />} />
+        <Route path='/login' element={<Login user={user} setUser={setUser} />} />
+        <Route path='/signup' element={<SignUp setUser={setUser} />} />
       </Routes>
     </div>
   )
