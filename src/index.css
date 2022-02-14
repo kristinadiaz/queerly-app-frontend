@@ -15,6 +15,12 @@ body {
   margin-left: 15%;
 }
 
-.background-white {
-  background-color: white;
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-height: 100%;
+  column-gap: 50px;
+  margin-left: 120px;
+  padding: 20px 20px;
 }

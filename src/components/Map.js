@@ -14,7 +14,7 @@ const defaultCenter = {
 }
 
 
-export default function Map({ businesses }) {
+export default function Map({ businesses, addFavorite }) {
     const [select, setSelect] = useState({})
     // console.log(select)
 
@@ -47,7 +47,7 @@ export default function Map({ businesses }) {
                     clickable={true}
                     onCloseClick={() => setSelect({})}
                     >
-                        <BusinessCard key={select.id} bus={select} />
+                        <BusinessCard key={select.id} bus={select} handleClick={addFavorite} />
                     </InfoWindow>
                 )}
             </GoogleMap>
