@@ -1,9 +1,16 @@
 import React from 'react'
-import { Card, Image } from 'semantic-ui-react'; 
+import { useNavigate } from 'react-router-dom';
+import { Card, Image, Icon } from 'semantic-ui-react'; 
 
 export default function BusinessCard({ bus, handleClick }) {
+    const navigate = useNavigate()
+
+    function onFavorite() {
+        navigate('/favorite')
+    }
+
     return(
-        <Card key={bus.id}>
+        <Card key={bus.id} onClick={() => handleClick(bus)} navigate={onFavorite}>
             <Image src={bus.image} />
             <Card.Content>
                 <Card.Header>{bus.name}</Card.Header>
@@ -19,6 +26,11 @@ export default function BusinessCard({ bus, handleClick }) {
                 <Card.Description>
                     {bus.description}
                 </Card.Description>
+            </Card.Content>
+            <Card.Content extra>
+                <a>
+                <Icon name='heart'/> Add To Favorites
+                </a>
             </Card.Content>
         </Card>
     )
