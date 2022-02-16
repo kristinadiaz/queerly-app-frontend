@@ -1,6 +1,6 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom';
-import { Card, Image, Icon } from 'semantic-ui-react'; 
+import { useNavigate, Link } from 'react-router-dom';
+import { Card, Image, Icon, Button } from 'semantic-ui-react'; 
 
 export default function BusinessCard({ bus, handleClick }) {
     const navigate = useNavigate()
@@ -32,8 +32,9 @@ export default function BusinessCard({ bus, handleClick }) {
                 <Icon name='heart'/> Add To Favorites
                 </a>
             </Card.Content>
+            {/* <Button compact fluid color='yellow' size='medium' type='submit'>
+                <Link to='/reviews'>Add Review</Link>
+            </Button> */}
         </Card>
     )
 }
-
-// onClick={() => handleClick(bus)}

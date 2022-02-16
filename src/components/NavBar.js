@@ -32,17 +32,13 @@ export default function NavBar ({ user, setUser }) {
       ) : (
         <Menu stackable>
           <Menu.Item>
-          <Image src={logo} alt='logo' size='mini'/>
+            <Image src={logo} alt='logo' size='mini' />
           </Menu.Item>
           <Menu.Item>
-            <Link to='/profile' className='link-profile'>
-              Profile
-            </Link>
+            <Link to='/favorite'>Favorites List</Link>
           </Menu.Item>
           <Menu.Item>
-            <Link to='/favorite'>
-              Favorites List
-            </Link>
+            <Link to='/reviews'>Review</Link>
           </Menu.Item>
           <Menu.Item>
             <Button basic color='blue' onClick={handleLogout}>
