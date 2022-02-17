@@ -10,10 +10,10 @@ export default function NewReview({ setReviews, user }) {
     const navigate = useNavigate()
 
     function handleReview(e) {
-        e.preventDefault()
+        e.preventDefault();
 
         function onReviewSubmit() {
-            navigate('/home')
+            navigate('/reviews')
         }
 
         fetch(`${API}/reviews`, {
@@ -36,8 +36,8 @@ export default function NewReview({ setReviews, user }) {
     }
 
     return(
-        <Grid style={{ height: '30vh' }} verticalAlign='center' className='review'>
-            <Grid.Column style={{ maxWidth: 450 }}>
+        <Grid style={{ height: '30vh' }} verticalAlign='center'>
+            <Grid.Column style={{ maxWidth: 450 }} className='review'>
                 <Header as='h2' color='orange' textAlign='center'>
                     Add Review
                 </Header>

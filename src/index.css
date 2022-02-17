@@ -28,3 +28,7 @@ body {
 .review-cards {
   float: left;
 }
+
+.review {
+  margin-top: 25px;
+}
