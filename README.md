@@ -1,71 +1,24 @@
-# Getting Started with Create React App
+# Queerly 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Want to support queer business in your area? Then use Queerly, the app that will show you queer businesses in your area. Click on a pin to show information about the business and add it to your favorites list. Next time you head out the door, make sure your Queerly app is up to date with the businesses you would like to support.
 
-## Available Scripts
+<img width="957" alt="Screen Shot 2022-01-30 at 10 35 48 AM" src="https://user-images.githubusercontent.com/89321676/151831740-74670038-801a-4a4a-b0d3-a9c7e6648299.png">
 
-In the project directory, you can run:
+- A user has many reviews, has many businesses through reviews
+- A business has many reviews, has many users through reviews
+- A review belongs to a user and to a business
 
-### `npm start`
+<img width="462" alt="Screen Shot 2022-01-30 at 11 04 03 AM" src="https://user-images.githubusercontent.com/89321676/151831830-cd921136-115f-447d-bf9c-dc93c1bc48fb.png">
+<img width="979" alt="Screen Shot 2022-01-30 at 11 06 02 AM" src="https://user-images.githubusercontent.com/89321676/151831865-9e1136c3-7341-48e0-8880-d4076365789a.png">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# User Stories
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- As a user, I can login and update my profile
+- As a user, I can click on a pin and information on the business will pop up as a card
+- As a user, I can click on an icon and have it added to my favorites list
+- As a user, I can delete/remove from my favorites list
+- As a user, I can write a review on the business and update my review
 
-### `npm test`
+# Bonus
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# queerly-app-frontend
+- Have a toggle to create Queer Mode (like dark mode, if I have time)
