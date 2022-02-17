@@ -24,3 +24,7 @@ body {
   margin-left: 120px;
   padding: 20px 20px;
 }
+
+.review-cards {
+  float: left;
+}

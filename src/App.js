@@ -12,18 +12,11 @@ const API = 'http://localhost:3000'
 export default function App() {
   const [user, setUser] = useState()
   const [businesses, setBusinesses] = useState([])
-  const [review, setReview] = useState('')
 
   useEffect(() => {
     fetch(`${API}/businesses`)
     .then(res => res.json())
     .then(data => setBusinesses(data))
-  }, [])
-
-  useEffect(() => {
-    fetch(`${API}/reviews`)
-    .then(res => res.json())
-    .then(info => setReview(info))
   }, [])
 
   function addFavorite (bus) {
@@ -38,8 +31,6 @@ export default function App() {
     )
   }
 
-
-
   return(
     <div>
       <Routes>
@@ -48,17 +39,8 @@ export default function App() {
         <Route path='/login' element={<Login user={user} setUser={setUser} />} />
         <Route path='/signup' element={<SignUp setUser={setUser} />} />
         <Route path='/favorite' element={<BusinessFavorite bus={businesses}  addFavorite={addFavorite} removeFavorite={removeFavorite} />} />
-        <Route path='/reviews' element={<Review review={review} setReview={setReview} user={user} businesses={businesses}/>} />
+        <Route path='/reviews' element={<Review user={user} />} />
       </Routes>
     </div>
   )
 }
-
-// useEffect(() => {
-  //   fetch(`${API}/me`)
-  //   .then(res => {
-  //     if(res.ok) {
-  //       res.json().then(user => setUser(user));
-  //     }
-  //   });
-  // }, [])

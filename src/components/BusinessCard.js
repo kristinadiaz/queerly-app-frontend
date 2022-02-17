@@ -32,9 +32,9 @@ export default function BusinessCard({ bus, handleClick }) {
                 <Icon name='heart'/> Add To Favorites
                 </a>
             </Card.Content>
-            {/* <Button compact fluid color='yellow' size='medium' type='submit'>
+            <Button compact fluid color='yellow' size='medium' type='submit'>
                 <Link to='/reviews'>Add Review</Link>
-            </Button> */}
+            </Button>
         </Card>
     )
 }
