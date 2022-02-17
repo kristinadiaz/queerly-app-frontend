@@ -1,5 +1,4 @@
 import React from 'react' 
-import { Grid } from 'semantic-ui-react'
 import BusinessCard from './BusinessCard'
 
 export default function BusinessFavorite({ bus, removeFavorite }) {
