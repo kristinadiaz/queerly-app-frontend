@@ -2,7 +2,7 @@ import React from 'react'
 import { useNavigate, Link } from 'react-router-dom';
 import { Card, Image, Icon, Button } from 'semantic-ui-react'; 
 
-export default function BusinessCard({ bus, handleClick }) {
+export default function BusinessCard({ bus, handleClick, onAdd }) {
     const navigate = useNavigate()
 
     function onFavorite() {
@@ -29,7 +29,8 @@ export default function BusinessCard({ bus, handleClick }) {
             </Card.Content>
             <Card.Content extra>
                 <a>
-                <Icon name='heart'/> Add To Favorites
+                <Icon name='heart'/> 
+                {onAdd ? "Add To Favorites" : "Added"}
                 </a>
             </Card.Content>
             <Button compact fluid color='yellow' size='medium' type='submit'>

@@ -12,6 +12,7 @@ const API = 'http://localhost:3000'
 export default function App() {
   const [user, setUser] = useState()
   const [businesses, setBusinesses] = useState([])
+  const [added, setAdded] = useState(true)
 
   useEffect(() => {
     fetch(`${API}/businesses`)
@@ -31,11 +32,15 @@ export default function App() {
     )
   }
 
+  function isAdded() {
+    setAdded(added => !added)
+  }
+
   return(
     <div>
       <Routes>
         <Route path='/' element={<SplashPage />} />
-        <Route path='/home' element={<Home user={user} setUser={setUser} businesses={businesses} addFavorite={addFavorite} />} />
+        <Route path='/home' element={<Home user={user} setUser={setUser} businesses={businesses} addFavorite={addFavorite} added={isAdded} />} />
         <Route path='/login' element={<Login user={user} setUser={setUser} />} />
         <Route path='/signup' element={<SignUp setUser={setUser} />} />
         <Route path='/favorite' element={<BusinessFavorite bus={businesses}  addFavorite={addFavorite} removeFavorite={removeFavorite} />} />
